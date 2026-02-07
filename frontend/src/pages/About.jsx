@@ -185,30 +185,26 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
-                className="text-center"
+                className="text-center card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 data-testid={`team-member-${index}`}
               >
-                <div className="relative mb-4 inline-block">
-                  <div className="w-40 h-40 mx-auto rounded-2xl overflow-hidden">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-heading font-bold text-secondary">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
                 </div>
-                <h3 className="font-heading font-bold text-lg text-primary">
+                <h3 className="font-heading font-bold text-xl text-primary">
                   {member.name}
                 </h3>
-                <p className="text-secondary font-medium text-sm mb-1">
+                <p className="text-accent font-medium mb-2">
                   {member.role}
                 </p>
                 <p className="text-slate-500 text-sm">
