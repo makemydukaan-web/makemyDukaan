@@ -176,8 +176,8 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.pexels.com/photos/35317008/pexels-photo-35317008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Indian SMB owner"
+                src="https://images.unsplash.com/photo-1556217477-d325251ece38?w=800"
+                alt="Home based baker"
                 className="rounded-2xl shadow-xl"
                 data-testid="why-digital-image"
               />

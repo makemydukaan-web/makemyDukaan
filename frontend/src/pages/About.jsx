@@ -31,28 +31,14 @@ const About = () => {
 
   const team = [
     {
-      name: 'Rahul Sharma',
-      role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-      description: '10+ years in digital transformation'
+      name: 'Vijay Raghani',
+      role: 'Co-Founder',
+      description: 'Passionate about digitizing Indian SMBs'
     },
     {
-      name: 'Priya Patel',
-      role: 'Head of Design',
-      image: 'https://images.unsplash.com/photo-1590905775253-a4f0f3c426ff?w=400',
-      description: 'UI/UX expert with Indian context focus'
-    },
-    {
-      name: 'Amit Kumar',
-      role: 'Lead Developer',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400',
-      description: 'Full-stack wizard, performance obsessed'
-    },
-    {
-      name: 'Neha Singh',
-      role: 'Marketing Head',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400',
-      description: 'Meta & Google certified expert'
+      name: 'Rajat Mahajan',
+      role: 'Co-Founder',
+      description: 'Building tech solutions for Bharat'
     }
   ];
 
