@@ -1,0 +1,131 @@
+{
+  "brand_identity": {
+    "name": "MakeMyDukaan",
+    "mission": "Empowering Indian SMBs to own their digital future instantly.",
+    "tone": "Professional, Trustworthy, Aspirational, Accessible",
+    "theme_mode": "light",
+    "emotional_archetype": "The Performance Pro (Trust & Precision)",
+    "design_style": "Modern Minimalist with Indian Context"
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope",
+      "weights": [600, 700, 800],
+      "usage": "Use for all H1-H6. Tight tracking (-0.02em).",
+      "fallback": "sans-serif"
+    },
+    "body": {
+      "family": "DM Sans",
+      "weights": [400, 500],
+      "usage": "Use for paragraphs, inputs, and UI elements. Relaxed leading.",
+      "fallback": "sans-serif"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#0F172A",
+      "foreground": "#F8FAFC",
+      "description": "Deep Navy (Slate-900) for strong hierarchy and trust."
+    },
+    "secondary": {
+      "DEFAULT": "#0EA5E9",
+      "foreground": "#FFFFFF",
+      "description": "Vibrant Sky Blue (Sky-500) for primary actions."
+    },
+    "accent": {
+      "DEFAULT": "#14B8A6",
+      "foreground": "#FFFFFF",
+      "description": "Teal (Teal-500) for growth indicators, success states, and highlights."
+    },
+    "background": {
+      "DEFAULT": "#FFFFFF",
+      "subtle": "#F8FAFC",
+      "description": "Pure white for clarity, cool gray for sections."
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#94A3B8"
+    }
+  },
+  "layout_strategies": {
+    "spacing": "Generous. Use p-8 to p-24 for section padding.",
+    "grid_system": {
+      "marketing_hero": "Tetris Grid: Asymmetric 12-col grid. Text occupies 7 cols, Visuals occupy 5 cols.",
+      "services_section": "Bento Grid: Mixed span cards (2x2, 1x2, 1x1).",
+      "mobile": "Single column, comfortable gap-6."
+    },
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "nav": "backdrop-blur-xl bg-white/70 border-b border-white/20 shadow-sm",
+      "cards": "bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300"
+    },
+    "micro_interactions": {
+      "buttons": "Transform -translate-y-0.5 on hover. Active scale-95.",
+      "links": "Underline expand from center or color shift to Teal.",
+      "cards": "Lift up on hover (hover:-translate-y-1)."
+    },
+    "gradients": "Subtle mesh gradients in light blue/teal opacity-10 for backgrounds. NO text gradients."
+  },
+  "component_library": {
+    "path": "/app/frontend/src/components/ui",
+    "instructions": "Use Shadcn components but override default rounded-md to rounded-xl for a friendlier SMB vibe. Use 'Sonner' for toasts.",
+    "special_components": [
+      {
+        "name": "WhatsAppButton",
+        "type": "Fixed",
+        "position": "bottom-right",
+        "style": "bg-[#25D366] text-white rounded-full p-4 shadow-lg hover:scale-110 transition-transform",
+        "icon": "FaWhatsapp"
+      }
+    ]
+  },
+  "images": {
+    "hero_visual": {
+      "url": "https://images.unsplash.com/photo-1758873271902-a63ecd5b5235?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ24lMjBsYXB0b3B8ZW58MHx8fHwxNzcwNDc0MDkxfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Modern office team working on digital solutions",
+      "usage": "Hero section right side or background with overlay"
+    },
+    "target_audience_smb": {
+      "url": "https://images.pexels.com/photos/35317008/pexels-photo-35317008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "alt": "Indian shopkeeper in Varanasi shop",
+      "usage": "Why Go Digital / Target Audience section"
+    },
+    "service_web_dev": {
+      "url": "https://images.unsplash.com/photo-1653976499575-6aacb2644727?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB3ZWIlMjBkZXNpZ24lMjBsYXB0b3B8ZW58MHx8fHwxNzcwNDc0MDkxfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Laptop with code on wooden table",
+      "usage": "Web Development Service Card"
+    },
+    "testimonial_avatar": {
+      "url": "https://images.unsplash.com/photo-1590905775253-a4f0f3c426ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBzbWlsaW5nJTIwcHJvZmVzc2lvbmFsJTIwd29tYW58ZW58MHx8fHwxNzcwNDc0MDkyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Happy Indian female professional",
+      "usage": "Testimonial Section"
+    },
+    "team_meeting": {
+      "url": "https://images.unsplash.com/photo-1716703373020-17ff360924ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjcmVhdGl2ZSUyMG9mZmljZSUyMHRlYW0lMjBtZWV0aW5nJTIwYWVzdGhldGljfGVufDB8fHx8MTc3MDQ3NDA3OXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Team meeting in office",
+      "usage": "About Us / Team Section"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install 'framer-motion' for all entrance animations.",
+    "Use 'lucide-react' for icons (Rocket, TrendingUp, Smartphone, Code).",
+    "Ensure the 'Get Quote' form sends data to a mock API endpoint.",
+    "The WhatsApp button must link to 'https://wa.me/9663112394'.",
+    "Portfolio page must use a Masonry or Grid layout for projects.",
+    "Pricing cards must highlight the 'Best Value' plan with a Teal border ring.",
+    "Use Tailwind's 'slate' scale for neutrals, NOT gray or zinc, to keep it cool and professional.",
+    "Ensure 'data-testid' is added to all interactive elements (buttons, inputs, links)."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts. Use asymmetry.",
+    "Dark colors look good when used independently without gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "Do not apply universal transition 'transition: all'.",
+    "Do not center align the app container.",
+    "Use modern button styles (pill or sharp) with interaction animations."
+  ]
+}
