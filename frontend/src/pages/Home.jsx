@@ -176,8 +176,8 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=800"
-                alt="Home based baker preparing delicious treats"
+                src="https://images.unsplash.com/photo-1607478900766-efe13248b125?w=800"
+                alt="Home based baker with fresh baked treats"
                 className="rounded-2xl shadow-xl"
                 data-testid="why-digital-image"
               />
