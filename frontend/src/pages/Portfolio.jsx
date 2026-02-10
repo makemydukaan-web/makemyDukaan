@@ -91,22 +91,19 @@ const Portfolio = () => {
       quote: "MakeMyDukaan didn't just build us a website, they transformed how we do business. Our customers can now book appointments 24/7.",
       author: "Dr. Sneha Reddy",
       role: "Owner, Wellness Clinic",
-      location: "Hyderabad",
-      image: "https://images.unsplash.com/photo-1590905775253-a4f0f3c426ff?w=200"
+      location: "Hyderabad"
     },
     {
       quote: "The team understood our local market perfectly. They created a website that resonates with our customers and reflects our brand.",
       author: "Mohammed Farhan",
       role: "Founder, Al-Baik Textiles",
-      location: "Surat",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
+      location: "Surat"
     },
     {
       quote: "From concept to launch in just 3 days! The speed and quality exceeded all expectations. Highly recommended for any SMB.",
       author: "Lakshmi Iyer",
       role: "Director, Iyer Catering",
-      location: "Coimbatore",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200"
+      location: "Coimbatore"
     }
   ];
 
@@ -214,7 +211,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials - No Images */}
       <section className="py-24 bg-subtle" data-testid="testimonials-section">
         <div className="container">
           <motion.div
@@ -246,17 +243,10 @@ const Portfolio = () => {
                 <p className="text-slate-600 mb-6 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
-                <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-medium text-primary">{testimonial.author}</p>
-                    <p className="text-sm text-slate-500">{testimonial.role}</p>
-                    <p className="text-xs text-slate-400">{testimonial.location}</p>
-                  </div>
+                <div>
+                  <p className="font-medium text-primary text-lg">{testimonial.author}</p>
+                  <p className="text-sm text-slate-500">{testimonial.role}</p>
+                  <p className="text-xs text-slate-400 mt-1">{testimonial.location}</p>
                 </div>
                 <div className="flex gap-1 mt-4">
                   {[...Array(5)].map((_, i) => (

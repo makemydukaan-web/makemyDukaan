@@ -15,44 +15,48 @@ const Contact = () => {
     budget: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Create email body with form data
+    const emailBody = `
+Hi,
 
-    try {
-      const API_URL = process.env.REACT_APP_BACKEND_URL || '';
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+I'm interested in your services. Here are my details:
 
-      const data = await response.json();
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Business Type: ${formData.business_type}
+Budget: ${formData.budget}
+Message: ${formData.message}
 
-      if (response.ok) {
-        toast.success(data.message || 'Thank you! We\'ll get back to you soon.');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          business_type: '',
-          budget: '',
-          message: ''
-        });
-      } else {
-        toast.error(data.detail || 'Something went wrong. Please try again.');
-      }
-    } catch (error) {
-      toast.error('Network error. Please check your connection.');
-    } finally {
-      setIsSubmitting(false);
-    }
+Looking forward to hearing from you!
+    `;
+    
+    // Create WhatsApp message
+    const whatsappMessage = `Hi! I'm ${formData.name}. I'm interested in your services.\n\nBusiness Type: ${formData.business_type}\nBudget: ${formData.budget}\n\nContact: ${formData.email} | ${formData.phone}`;
+    
+    // Open email client
+    window.location.href = `mailto:hello@makemydukaan.in?subject=Website Inquiry from ${formData.name}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Show success message
+    toast.success('Opening your email client... You can also reach us on WhatsApp!');
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      business_type: '',
+      budget: '',
+      message: ''
+    });
   };
 
   const businessTypes = [
@@ -90,8 +94,7 @@ const Contact = () => {
               Let's Build Your Digital Presence
             </h1>
             <p className="text-lg text-slate-600">
-              Ready to take your business online? Fill out the form below and we'll 
-              get back to you within 24 hours with a custom quote.
+              Ready to take your business online? Fill out the form below or reach us directly via WhatsApp/Email.
             </p>
           </motion.div>
         </div>
@@ -213,25 +216,16 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting}
                   className="btn-primary w-full justify-center"
                   data-testid="submit-button"
                 >
-                  {isSubmitting ? (
-                    <span className="flex items-center gap-2">
-                      <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                      </svg>
-                      Sending...
-                    </span>
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="w-5 h-5" />
-                    </>
-                  )}
+                  Send via Email
+                  <Send className="w-5 h-5" />
                 </button>
+                
+                <p className="text-sm text-slate-500 text-center">
+                  Or contact us directly via WhatsApp or phone below
+                </p>
               </form>
             </motion.div>
 
@@ -298,7 +292,7 @@ const Contact = () => {
                 href="https://wa.me/9663112394"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-6 bg-[#25D366] rounded-2xl text-white hover:bg-[#20bd5a] transition-colors"
+                className="flex items-center gap-4 p-6 bg-[#25D366] rounded-2xl text-white hover:bg-[#20bd5a] transition-colors mb-8"
                 data-testid="whatsapp-cta"
               >
                 <FaWhatsapp className="w-10 h-10" />
@@ -309,8 +303,8 @@ const Contact = () => {
                 <ArrowRight className="w-6 h-6 ml-auto" />
               </a>
 
-              {/* Map Placeholder */}
-              <div className="mt-8 rounded-2xl overflow-hidden h-64 bg-slate-100">
+              {/* Map */}
+              <div className="rounded-2xl overflow-hidden h-64 bg-slate-100">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.84916296526!2d77.49085452719816!3d12.954517008496057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1704893200000!5m2!1sen!2sin"
                   width="100%"
