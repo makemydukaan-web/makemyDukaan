@@ -263,7 +263,7 @@ const Home = () => {
               Ready to Take Your Business Online?
             </h2>
             <p className="text-slate-300 text-lg mb-8">
-              Join 500+ Indian businesses that have transformed their reach with MakeMyDukaan. 
+              Join many Indian businesses that have transformed their reach with MakeMyDukaan. 
               Get started today and see results within 24 hours.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
