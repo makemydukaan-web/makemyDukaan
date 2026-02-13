@@ -271,7 +271,7 @@ const Portfolio = () => {
               Your Success Story Starts Here
             </h2>
             <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-              Join 500+ businesses that have transformed their digital presence with MakeMyDukaan.
+              Join businesses that have transformed their digital presence with MakeMyDukaan.
             </p>
             <Link
               to="/contact"
