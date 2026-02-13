@@ -216,31 +216,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-24 bg-primary" data-testid="about-stats-section">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: 'Many ', label: 'Happy Clients' },
-              { number: 'Growing ', label: 'Team' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <div className="text-4xl md:text-5xl font-heading font-bold text-accent mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-slate-400">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-24" data-testid="about-cta">
         <div className="container text-center">
