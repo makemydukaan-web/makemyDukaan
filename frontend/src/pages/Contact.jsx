@@ -43,7 +43,7 @@ Looking forward to hearing from you!
     const whatsappMessage = `Hi! I'm ${formData.name}. I'm interested in your services.\n\nBusiness Type: ${formData.business_type}\nBudget: ${formData.budget}\n\nContact: ${formData.email} | ${formData.phone}`;
     
     // Open email client
-    window.location.href = `mailto:hello@makemydukaan.in?subject=Website Inquiry from ${formData.name}&body=${encodeURIComponent(emailBody)}`;
+    window.location.href = `mailto:makemydukaan@gmail.com?subject=Website Inquiry from ${formData.name}&body=${encodeURIComponent(emailBody)}`;
     
     // Show success message
     toast.success('Opening your email client... You can also reach us on WhatsApp!');
