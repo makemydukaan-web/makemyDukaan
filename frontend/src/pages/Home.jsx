@@ -9,7 +9,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const Home = () => {
   const stats = [
-    { number: '500+', label: 'Businesses Digitized', icon: Users },
+    { number: 'Many ', label: 'Businesses Digitized', icon: Users },
     { number: '98%', label: 'Client Satisfaction', icon: Award },
     { number: '24hr', label: 'Launch Time', icon: Clock },
     { number: '10x', label: 'Growth Boost', icon: TrendingUp }
