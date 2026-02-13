@@ -65,7 +65,7 @@ const About = () => {
               </p>
               <p className="text-slate-600">
                 From kirana stores to boutiques, from salons to restaurants – we've helped 
-                500+ businesses across India establish their digital footprint and grow 
+                many businesses across India establish their digital footprint and grow 
                 their customer base.
               </p>
             </motion.div>
@@ -221,10 +221,8 @@ const About = () => {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: '500+', label: 'Happy Clients' },
-              { number: '1000+', label: 'Projects Delivered' },
-              { number: '50+', label: 'Team Members' },
-              { number: '15+', label: 'Cities Served' }
+              { number: 'Many ', label: 'Happy Clients' },
+              { number: 'Growing ', label: 'Team' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -256,7 +254,7 @@ const About = () => {
               Join Our Growing Family
             </h2>
             <p className="text-slate-600 text-lg mb-8 max-w-2xl mx-auto">
-              Become part of 500+ businesses that trust MakeMyDukaan for their digital journey.
+              Become part of many businesses that trust MakeMyDukaan for their digital journey.
             </p>
             <Link
               to="/contact"
