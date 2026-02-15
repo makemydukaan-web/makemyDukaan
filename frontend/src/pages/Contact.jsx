@@ -254,7 +254,7 @@ Looking forward to hearing from you!
                     </div>
                   </a>
                   <a
-                    href="mailto:hello@makemydukaan.in"
+                    href="mailto:makemydukaan@gmail.com"
                     className="flex items-start gap-4 hover:text-accent transition-colors"
                     data-testid="contact-email"
                   >
@@ -263,7 +263,7 @@ Looking forward to hearing from you!
                     </div>
                     <div>
                       <p className="font-medium mb-1">Email</p>
-                      <p className="text-slate-300">hello@makemydukaan.in</p>
+                      <p className="text-slate-300">makemydukaan@gmail.com</p>
                     </div>
                   </a>
                   <div className="flex items-start gap-4">
